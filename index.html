@@ -26,13 +26,15 @@
   <script src="js/turn.min.js"></script>
   <script>
     $(document).ready(function () {
-      $("#flipbook").turn({
-        width: 800,
-        height: 500,
-        autoCenter: true,
-        elevation: 50,
-        gradients: true
-      });
+     $("#flipbook").turn({
+  width: 800,
+  height: 500,
+  autoCenter: true,
+  display: "double", // Importante para que funcione como flipbook
+  gradients: true,
+  elevation: 50,
+  acceleration: true
+});
     });
   </script>
 </body>
