@@ -1,41 +1,73 @@
-<!-- Despliegue forzado por Alonso 😎 -->
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Flipbook de Alonso 🔥</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipbook BCM 🔥</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #flipbook {
+      width: 800px;
+      height: 500px;
+    }
+
+    #flipbook .hard {
+      background: #333;
+      color: white;
+      font-size: 24px;
+      text-align: center;
+      line-height: 500px;
+      font-weight: bold;
+    }
+
+    #flipbook img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
 </head>
 <body>
 
   <div id="flipbook">
     <div class="hard">👑 Portada</div>
-
-    <!-- 14 páginas con imágenes desde /pages -->
-    <script>
-      for (let i = 1; i <= 14; i++) {
-        document.write(`<div><img src="pages/${i}.jpg" alt="Página ${i}" /></div>`);
-      }
-    </script>
-
+    <div><img src="pages/1.jpg" alt="Página 1" /></div>
+    <div><img src="pages/2.jpg" alt="Página 2" /></div>
+    <div><img src="pages/3.jpg" alt="Página 3" /></div>
+    <div><img src="pages/4.jpg" alt="Página 4" /></div>
+    <div><img src="pages/5.jpg" alt="Página 5" /></div>
+    <div><img src="pages/6.jpg" alt="Página 6" /></div>
+    <div><img src="pages/7.jpg" alt="Página 7" /></div>
+    <div><img src="pages/8.jpg" alt="Página 8" /></div>
+    <div><img src="pages/9.jpg" alt="Página 9" /></div>
+    <div><img src="pages/10.jpg" alt="Página 10" /></div>
+    <div><img src="pages/11.jpg" alt="Página 11" /></div>
+    <div><img src="pages/12.jpg" alt="Página 12" /></div>
+    <div><img src="pages/13.jpg" alt="Página 13" /></div>
+    <div><img src="pages/14.jpg" alt="Página 14" /></div>
     <div class="hard">📘 Contraportada</div>
   </div>
 
-  <!-- jQuery + Turn.js -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="js/turn.min.js"></script>
   <script>
     $(document).ready(function () {
-     $("#flipbook").turn({
-  width: 800,
-  height: 500,
-  autoCenter: true,
-  display: "double", // Importante para que funcione como flipbook
-  gradients: true,
-  elevation: 50,
-  acceleration: true
-});
+      $('#flipbook').turn({
+        width: 800,
+        height: 500,
+        autoCenter: true
+      });
     });
   </script>
+
 </body>
 </html>
