@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flipbook 🔥</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="flipbook">
+    <div class="hard">👑 Portada</div>
+
+    <!-- Cargar las 14 páginas -->
+    <script>
+      for (let i = 1; i <= 14; i++) {
+        document.write(`<div><img src="pages/${i}.jpg" alt="Página ${i}" /></div>`);
+      }
+    </script>
+
+    <div class="hard">📘 Contraportada</div>
+  </div>
+
+  <!-- jQuery + Turn.js -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/turn.min.js"></script>
+  <script>
+    $("#flipbook").turn({
+      width: 800,
+      height: 500,
+      autoCenter: true,
+      elevation: 50,
+      gradients: true
+    });
+  </script>
+</body>
+</html>
